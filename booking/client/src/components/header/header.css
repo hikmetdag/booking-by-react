@@ -36,8 +36,13 @@
   padding: 10px;
   border-radius: 20px;
 }
+.headerTitle{
+  font-size: 50px;
+}
+
 .headerDescription {
-  margin: 20px 0px;
+  margin: 0px 0px 20px 0px;
+  font-size: 25px;
 }
 .headerBtn {
   background-color: #0071c2;
@@ -75,11 +80,15 @@
 .headerSearchInput {
   border: none;
   outline: none;
+  
 }
 
 .headerSearchText {
-  color: lightgray;
+  color: black;
   cursor: pointer;
+}
+::placeholder {
+  color: black;
 }
 .date {
   position: absolute;

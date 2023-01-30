@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext} from "react";
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,6 +15,7 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import { SearchContext } from "../../contextApi/SearhContext";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
@@ -41,8 +42,11 @@ const Header = ({ type }) => {
       };
     });
   };
+
+  const {dispatch}=useContext(SearchContext)
   const navigate = useNavigate();
   const handleSearch = () => {
+    dispatch({ type: "NEW_SEARCH", payload: { destination, date, options } });
     navigate("/hotels", { state: { destination, date, options } });
   };
   return (
@@ -78,19 +82,18 @@ const Header = ({ type }) => {
         {type !== "list" && (
           <>
             <h1 className="headerTitle">
-              A lifetime of discounts? It's Genius.
+            Find your next stay
             </h1>
             <p className="headerDescription">
-              Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Munebooking account
+            Search deals on hotels, homes, and much more...
             </p>
-            <button className="headerBtn">Sign In/Register</button>
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
                 <input
                   onChange={(e) => {
-                    setDestination(e.target.value);
+                    setDestination((e.target.value).toLowerCase())
+                  
                   }}
                   type="text"
                   placeholder="Where are you going?"
@@ -107,7 +110,7 @@ const Header = ({ type }) => {
                 >{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
                   date[0].endDate,
                   "MM/dd/yyyy"
-                )} `}</span>
+                )} `} </span>
                 {openDate && (
                   <DateRange
                     editableDateInputs={true}

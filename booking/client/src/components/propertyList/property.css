@@ -19,8 +19,11 @@
 .listTitles>h1{
     font-size: 18px;
      color: #444;
+     text-transform: capitalize;
+    
 }
 .listTitles>h2{
     font-size: 14px;
     font-weight: 300;
+    text-transform: capitalize;
 }

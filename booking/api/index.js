@@ -20,12 +20,12 @@ const connectDb = async () => {
 };
 const corsOptions = {
     origin: "http://localhost:3000",
-    optionsSuccessStatus: 200 
-  }
+    optionsSuccessStatus: 200
+};
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
 app.use(express.json());
-app.use('/api/hotels',cors(corsOptions),hotels);
+app.use('/api/hotels', hotels);
 
 app.use((err, req, res, next) => {
     const errorStatus = err.status || 500;
@@ -38,7 +38,7 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(8000, () => {
+app.listen(8080, () => {
     connectDb();
     console.log('Connected to server');
 });
