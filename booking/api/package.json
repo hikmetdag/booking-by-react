@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,8 @@
     "express": "^4.18.2",
     "mongoose": "^6.9.0",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.0"
   }
 }
