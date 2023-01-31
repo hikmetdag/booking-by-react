@@ -2,17 +2,20 @@
   width: 100%;
   max-width: 1024px;
   font-size: 12px;
+  
 }
 .fLists {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  
 }
 
 .fList {
   list-style: none;
   padding: 0;
+  
 }
 .fListItem {
   margin-bottom: 10px;
@@ -29,12 +32,19 @@
   .fLists {
     display: flex;
     flex-wrap: wrap; 
-    padding: 10px;
+    justify-content:space-around;
     align-items: center;
+    margin-left: 10px;
+    margin-right: 20px;
   }
   .fList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 0.5px solid lightgray;
-    width: 20%;
+    height: 250px;
+    width: 150px;
     
     
   }
