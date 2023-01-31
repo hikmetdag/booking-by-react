@@ -21,6 +21,7 @@ const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  console.log(location);
   const id = location.pathname.split("/")[2];
   const { data, loading, error } = useFetch(`/hotels/find/${id}`);
 

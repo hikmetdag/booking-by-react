@@ -16,11 +16,10 @@ const List = () => {
   const [date, setDate] = useState(location.state.date);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state.options);
-  const [min, setMin] = useState(undefined);
-  const [max, setMax] = useState(undefined);
+  
 
   const { data, loading, error, reFetch } = useFetch(
-    `/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
+    `/hotels?city=${destination}`
   );
   const handleClick = () => {
     reFetch();
@@ -48,8 +47,8 @@ const List = () => {
               <label>Check In</label>
               <span onClick={() => setOpenDate(!openDate)}>{`${format(
                 date[0].startDate,
-                "MM/dd/yyyy"
-              )} to ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
+                "dd/MM/yyyy"
+              )} to ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
               {openDate && (
                 <DateRange
                   onChange={(item) => setDate([item.selection])}
@@ -64,21 +63,13 @@ const List = () => {
                 <span className="lsOptionText">
                   Min Price <small>Per night</small>
                 </span>
-                <input
-                  onChange={(e) => setMin(e.target.value)}
-                  type="number"
-                  className="lsOptionInput"
-                />
+                <input type="number" className="lsOptionInput" />
               </div>
               <div className="lsOptionItem">
                 <span className="lsOptionText">
                   Max Price <small>Per night</small>
                 </span>
-                <input
-                  onChange={(e) => setMax(e.target.value)}
-                  type="number"
-                  className="lsOptionInput"
-                />
+                <input type="number" className="lsOptionInput" />
               </div>
               <div className="lsOptionItem">
                 <span className="lsOptionText">Adult</span>
@@ -114,15 +105,9 @@ const List = () => {
             <button onClick={handleClick}>Search</button>
           </div>
           <div className="listResult">
-            {loading ? (
-              "loading"
-            ) : (
-              <>
-                {data.map((item) => (
-                  <SearchItem item={item} key={item._id} />
-                ))}
-              </>
-            )}
+            {data.map((item) => (
+              <SearchItem item={item} key={item._id} />
+            ))}
           </div>
         </div>
       </div>
