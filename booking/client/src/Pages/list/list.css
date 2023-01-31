@@ -77,3 +77,20 @@
 .listResult {
   flex: 3;
 } 
+
+@media only screen and (max-width: 600px) {
+ 
+  .listWrapper{
+   display: flex;
+   flex-direction:column;
+  }
+  .listSearch{
+    position: static;
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+  .listResult{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

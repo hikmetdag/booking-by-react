@@ -44,3 +44,21 @@
 .fpRating>span{
   font-size: 14px;
 }
+@media only screen and (max-width: 1000px) {
+  .fp {
+    width: 95%;
+    
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .fp {
+    overflow-x: scroll;
+  }
+  .fpItem {
+    min-width: 200px;
+    flex-basis: 0;
+    flex-grow: 1;
+    
+  }
+}

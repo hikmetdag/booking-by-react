@@ -7,6 +7,8 @@ import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import SearchItem from "../../components/searchitem/SearchItem";
 import useFetch from "../../hooks/useFetch";
+import Error from "../../components/Error/Error";
+import Loading from "../../components/loading/Loading";
 
 const List = () => {
   const location = useLocation();
@@ -23,6 +25,9 @@ const List = () => {
   const handleClick = () => {
     reFetch();
   };
+
+  if (error) return <Error />;
+  if (loading) return <Loading />;
   return (
     <div>
       <Navbar />
@@ -33,7 +38,11 @@ const List = () => {
             <h1 className="searchTitle">Search</h1>
             <div className="lsItem">
               <label>Destination</label>
-              <input type="text" placeholder={destination} />
+              <input
+                type="text"
+                onChange={(e) => setDestination(e.currentTarget.value)}
+                placeholder={destination}
+              />
             </div>
             <div className="lsItem">
               <label>Check In</label>

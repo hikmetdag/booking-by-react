@@ -27,3 +27,21 @@
     font-weight: 300;
     text-transform: capitalize;
 }
+@media only screen and (max-width: 1000px) {
+    .propertyList {
+      width: 95%;
+      
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .propertyList {
+      overflow-x: scroll;
+    }
+    .listItem {
+      min-width: 200px;
+      flex-basis: 0;
+      flex-grow: 1;
+      
+    }
+  }

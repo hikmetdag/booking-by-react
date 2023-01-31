@@ -12,8 +12,7 @@ const SearchItem = ({item}) => {
       />
       <div className="siDesc">
         <h1 className="siTitle">{item.name}</h1>
-        <span className="siDistance">{}</span>
-        <span className="siTaxiOp">{item.distance}</span>
+        <span className="siDistance">{item.distance}</span>
         <span className="siSubtitle">
           {item.title}
         </span>

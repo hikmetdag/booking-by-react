@@ -18,7 +18,6 @@
   margin: 20px 0px 20px 0px;
 }
 
-
 .headerList {
   display: flex;
   flex-direction: row;
@@ -36,7 +35,7 @@
   padding: 10px;
   border-radius: 20px;
 }
-.headerTitle{
+.headerTitle {
   font-size: 50px;
 }
 
@@ -80,7 +79,6 @@
 .headerSearchInput {
   border: none;
   outline: none;
-  
 }
 
 .headerSearchText {
@@ -104,7 +102,6 @@
   color: gray;
   border: 3px solid #febb02;
   border-top: none;
-
 }
 .optionItem {
   width: 200px;
@@ -112,17 +109,98 @@
   justify-content: space-between;
   margin: 10px;
 }
-.optionCounter{
+.optionCounter {
   display: flex;
   align-items: center;
   gap: 10px;
   color: black;
   font-size: 12px;
-
 }
-.optionCounterButton{
+.optionCounterButton {
   width: 30px;
   height: 30px;
   border: 1px solid #0071c2;
   background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .headerList {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .headerSearch {
+    flex-direction: column;
+    height: 250px;
+    position: static;
+    background-color: #febb02;
+  }
+  .headerSearchItem {
+    background-color: white;
+    height: 60px;
+    margin: 2px 4px 2px 4px;
+    width: 100%;
+  }
+  .headerSearchItem > button {
+    width: 100%;
+    font-size: 20px;
+    height: 60px;
+  }
+  .headerIcon {
+    margin-left: 5px;
+  }
+  .headerTitle {
+    font-size: 40px;
+  }
+  .date {
+    top: 135px;
+  }
+  .options {
+    top: 50px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .headerContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .headerList {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .headerSearch {
+    flex-direction: column;
+    height: 250px;
+    position: static;
+    background-color: #febb02;
+    justify-content: space-evenly;
+    padding: 0%;
+  }
+  .headerSearchItem {
+    background-color: white;
+    height: 60px;
+    /* margin: 2px 4px 2px 4px; */
+    width: 100%;
+  }
+  .headerSearchItem > button {
+    width: 100%;
+    font-size: 20px;
+    height: 60px;
+  }
+  .headerIcon {
+    margin-left: 5px;
+  }
+  .headerTitle {
+    font-size: 40px;
+  }
+  .date {
+    top: 130px;
+  }
+  .options {
+    top: 408px;
+  }
 }

@@ -13,19 +13,7 @@
     gap: 10px;
     position: relative;
   }
-  
-  .bookNow {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    border: none;
-    padding: 10px 20px;
-    background-color: #0071c2;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+
   
   .hotelTitle {
     font-size: 24px;
@@ -56,6 +44,7 @@
   
   .hotelImgWrapper {
     width: 33%;
+    
   }
   
   .hotelImg {
@@ -148,4 +137,35 @@
     font-size: 50px;
     color: lightgray;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .hotelImg {
+      min-width: 350px;
+      height: 300px;
+    }
+    .sliderImg{
+      min-width: 300px;
+      height: 300px;
+    }
+    .hotelImages{
+      flex-wrap: nowrap;
+      flex-direction: row;
+      overflow-x: scroll;
+      background-color: aqua;
+      margin: 2px;
+      
+    }
+    .hotelContainer{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .hotelDetails{
+      flex-direction: column;
+    }
+    .hotelDetailsPrice{
+      display: flex;
+      align-items: center;
+    }
+
   }

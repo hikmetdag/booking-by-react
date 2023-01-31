@@ -21,9 +21,21 @@
   font-size: 30x;
 }
 
+
 .navButton {
   margin-left: 20px;
   border: none;
   padding: 5px 10px;
-  color: blue;
+  color: #003580;
+}
+@media only screen and (max-width: 600px) {
+.navbarConatainer{
+  margin: 15px;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbarConatainer{
+    margin: 15px;
+  }
 }
