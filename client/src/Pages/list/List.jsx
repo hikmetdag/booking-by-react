@@ -86,6 +86,7 @@ const List = () => {
                   type="number"
                   min={1}
                   className="lsOptionInput"
+                  onChange={(e) => setOptions(e.currentTarget.value)}
                   placeholder={options.adult}
                 />
               </div>
@@ -95,6 +96,7 @@ const List = () => {
                   type="number"
                   min={0}
                   className="lsOptionInput"
+                  onChange={(e) => setOptions(e.currentTarget.value)}
                   placeholder={options.children}
                 />
               </div>
@@ -104,6 +106,7 @@ const List = () => {
                   type="number"
                   min={1}
                   className="lsOptionInput"
+                  onChange={(e) => setOptions(e.currentTarget.value)}
                   placeholder={options.room}
                 />
               </div>
