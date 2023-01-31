@@ -1,4 +1,4 @@
-![Preview of the app!](/client/public/app.GIF)
+![Preview of the app!](/client/public/app.gif)
 # React Module Project :MuneTravel.com
 
 This app works similiar to Booking.com, user can see the hotel options in cities of Netherland.At this moment, tere are hotel information of only 3 cities which are Amsterdam,Rotterdam and Zwolle.
