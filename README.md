@@ -1,5 +1,5 @@
 
-<img src="/client/public/app.gif" width="250" height="250"/>
+<img src="/client/public/app.gif" width="500" height="500"/>
 # React Module Project :MuneTravel.com
 
 This app works similiar to Booking.com, user can see the hotel options in cities of Netherland.At this moment, tere are hotel information of only 3 cities which are Amsterdam,Rotterdam and Zwolle.
