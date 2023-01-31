@@ -1,7 +1,7 @@
 
 # React Module Project :MuneTravel.com
 
-This app works similiar to Booking.com, user can see the hotel options in cities of Netherland.At this moment, tere are hotel information of only 3 cities which are Amsterdam,Rotterdam and Zwolle.
+This app works similiar to Booking.com, user can see the hotel options in cities of Netherland.At this moment, there are hotel information of only 3 cities which are Amsterdam,Rotterdam and Zwolle.
 
 # Built with
 
