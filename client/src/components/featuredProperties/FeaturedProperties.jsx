@@ -5,8 +5,7 @@ import Error from "../Error/Error";
 import Loading from "../loading/Loading";
 
 const FeaturedProperties = () => {
-  const { data, loading, error } = useFetch("/hotels/getHotels?featured=true");
-  console.log(data);
+  const { data, loading, error } = useFetch("/hotels?featured=true");
   if (error) return <Error />;
   if (loading) return <Loading />;
   return (
