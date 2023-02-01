@@ -74,12 +74,12 @@ export const countByType = async (req, res, next) => {
 };
 
 
-export const getAll = async (req, res, next) => {
+export const getHotels = async (req, res, next) => {
    try {
-    // const hotelCount1 = await Hotel.remove({ city: "rotterdam" });
+    const hotelsByQuery = await Hotel.find(req.query);
   
 
-    res.status(200).json();
+    res.status(200).json(hotelsByQuery);
   } catch (err) {
     next(err);
   }
