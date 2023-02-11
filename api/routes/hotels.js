@@ -16,14 +16,14 @@ router.post("/", createHotel);
 
 //UPDATE
 router.put("/:id", updateHotel);
+
 //DELETE
 router.delete("/:id", deleteHotel);
+
 //GET
-
 router.get("/find/:id", getHotel);
+
 //GET ALL
-
-
 router.get("/countByCity", getByCity);
 router.get("/countByType", countByType);
 router.get("/", getHotels);

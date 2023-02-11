@@ -8,6 +8,7 @@ const FeaturedProperties = () => {
   const { data, loading, error } = useFetch("/hotels?featured=true");
   if (error) return <Error />;
   if (loading) return <Loading />;
+  
   return (
     <div className="fp">
       {data.slice(0, 4).map((item) => (

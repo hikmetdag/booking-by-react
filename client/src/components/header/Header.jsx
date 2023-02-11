@@ -42,12 +42,12 @@ const Header = ({ type }) => {
       };
     });
   };
-
   const {dispatch}=useContext(SearchContext)
   const navigate = useNavigate()
   const handleSearch = () => {
     dispatch({ type: "NEW_SEARCH", payload: { destination, date, options } });
-    navigate("/hotels", { state: { destination, date, options } });
+    navigate("/hotels", { state: { destination, date, options} });
+    console.log();
   };
   return (
     <div className="header">

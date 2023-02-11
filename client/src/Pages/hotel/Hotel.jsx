@@ -21,12 +21,11 @@ const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  console.log(location);
+
   const id = location.pathname.split("/")[2];
   const { data, loading, error } = useFetch(`/hotels/find/${id}`);
 
-  const { date,options } = useContext(SearchContext);
-  
+  const { date, options } = useContext(SearchContext);
 
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
   function dayDifference(date1, date2) {
@@ -36,7 +35,7 @@ const Hotel = () => {
   }
 
   const days = dayDifference(date[0].endDate, date[0].startDate);
-  
+
   const handleOpen = (i) => {
     setSlideNumber(i);
     setOpen(true);
@@ -55,8 +54,8 @@ const Hotel = () => {
 
     setSlideNumber(newSlideNumber);
   };
-  if(error) return <Error/>
-  if(loading) return <Loading/>
+  if (error) return <Error />;
+  if (loading) return <Loading />;
   return (
     <div>
       <Navbar />
@@ -124,7 +123,8 @@ const Hotel = () => {
                 excellent location score of 9.8!
               </span>
               <h2>
-                <b>€{days * data.cheapestPrice*options.room}</b> ({days} nights)
+                <b>€{days * data.cheapestPrice * options.room}</b> ({days}{" "}
+                nights)
               </h2>
               <button>Reserve or Book Now!</button>
             </div>
